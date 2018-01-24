@@ -91,9 +91,6 @@ public:
         ASSERT_TRUE(list.remove(1))
         ASSERT_TRUE(list.remove(0))
 
-        std:: cout << "Test 1: ";
-        list.print();
-        std:: cout << "\n";
         return true;
     }
 
@@ -108,11 +105,8 @@ public:
             ASSERT_TRUE(list2.insert(i,list2.size()))
                 
         ASSERT_TRUE(list1.size() == list2.size())
-        std:: cout << "Test 2: ";
-        list1.print();
-        std:: cout << "\n\t\t";
-        list2.print();
-        std:: cout << "\n";
+        ASSERT_TRUE(list2.select(65512) == 65512)
+        
         return true;
     }
 
@@ -143,9 +137,8 @@ public:
         }
         
         ASSERT_TRUE(list.head_->prev == NULL && list.tail_->next == NULL)
-        std:: cout << "Test 3: ";
-        list.print();
-        std:: cout << "\n\n";
+        
+        
         return true;
     }
 
